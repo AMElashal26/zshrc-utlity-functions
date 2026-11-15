@@ -1,0 +1,1 @@
+If you frequently jump between deep project directories, combine Zsh with fzf to build an instant search-and-jump command without typing paths:
