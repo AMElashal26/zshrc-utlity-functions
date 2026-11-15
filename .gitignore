@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# secrets / machine-specific overrides
+.zshrc.local
+.zsh_secrets
+.env
+*.local
+
+# editor / tooling
+.vscode/
+.idea/
+*.swp

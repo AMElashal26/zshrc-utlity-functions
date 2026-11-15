@@ -1,0 +1,6 @@
+# Quick project switcher: searches 2 levels deep from your workspace
+pj() {
+  local dir
+  dir=$(find ~/Code ~/Projects -mindepth 1 -maxdepth 2 -type d 2>/dev/null | fzf --height 40% --reverse)
+  [[ -n "$dir" ]] && cd "$dir"
+}
