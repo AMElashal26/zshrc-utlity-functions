@@ -1,1 +1,15 @@
-pj() { local search_roots=( ~/Code ~/dotfiles ) local dir dir=$(find "${search_roots[@]}" \ -mindepth 1 -maxdepth 4 \ -type d \ \( -name ".git" -o -name "node_modules" -o -name ".venv" -o -name ".vscode" -o -name "__pycache__" \) -prune \ -o -type d -print 2>/dev/null | fzf --height 50% --reverse --prompt="Jump to project > ") [[ -n "$dir" ]] && cd "$dir" }
+pj() {
+  local search_roots=(
+    ~/Code
+    ~/dotfiles
+  )
+
+  local dir
+  dir=$(find "${search_roots[@]}" \
+    -mindepth 1 -maxdepth 4 \
+    -type d \
+    \( -name ".git" -o -name "node_modules" -o -name ".venv" -o -name ".vscode" -o -name "__pycache__" \) -prune \
+    -o -type d -print 2>/dev/null | fzf --height 50% --reverse --prompt="Jump to project > ")
+
+  [[ -n "$dir" ]] && cd "$dir"
+}
