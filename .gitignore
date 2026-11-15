@@ -8,6 +8,10 @@
 .env
 *.local
 
+# personal lists (tips, quotes, links) live in ~, never in this public repo
+.zsh_*.txt
+zsh_*.txt
+
 # editor / tooling
 .vscode/
 .idea/
